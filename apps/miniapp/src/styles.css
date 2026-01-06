@@ -1,0 +1,100 @@
+:root{
+  --radius: 16px;
+  --pad: 14px;
+  --shadow: 0 8px 30px rgba(0,0,0,.08);
+}
+
+html, body { margin:0; padding:0; }
+body{
+  background: var(--tg-theme-bg-color, #0f0f0f);
+  color: var(--tg-theme-text-color, #fff);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+}
+
+a { color: inherit; text-decoration: none; }
+
+.container{ padding: 14px 14px 84px; max-width: 520px; margin: 0 auto; }
+.card{
+  background: var(--tg-theme-secondary-bg-color, rgba(255,255,255,.06));
+  border-radius: var(--radius);
+  padding: var(--pad);
+  box-shadow: var(--shadow);
+}
+
+.h1{ font-size: 20px; font-weight: 700; margin: 6px 0 10px; }
+.h2{ font-size: 16px; font-weight: 700; margin: 0 0 10px; opacity: .95; }
+.muted{ opacity: .72; font-size: 13px; line-height: 1.35; }
+
+.row{ display:flex; gap: 12px; align-items:center; }
+.spread{ display:flex; justify-content: space-between; align-items:center; gap: 10px; }
+.gap8{ gap: 8px; }
+.mt12{ margin-top: 12px; }
+.mt16{ margin-top: 16px; }
+
+.btn{
+  width: 100%;
+  border: 0;
+  border-radius: 14px;
+  padding: 14px 14px;
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  box-sizing: border-box;
+}
+.btnPrimary{
+  background: var(--tg-theme-button-color, #2ea6ff);
+  color: var(--tg-theme-button-text-color, #fff);
+}
+.btnGhost{
+  background: transparent;
+  color: var(--tg-theme-link-color, #2ea6ff);
+  border: 1px solid rgba(255,255,255,.14);
+}
+.input, .select, .textarea{
+  width: 100%;
+  padding: 13px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,.14);
+  background: rgba(0,0,0,.12);
+  color: inherit;
+  outline: none;
+  box-sizing: border-box;
+}
+.badge{
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid rgba(255,255,255,.14);
+}
+.badge.ok{ background: rgba(46, 255, 120, .12); }
+.badge.warn{ background: rgba(255, 200, 46, .12); }
+.badge.err{ background: rgba(255, 80, 80, .12); }
+
+.nav{
+  position: fixed; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,.35);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255,255,255,.10);
+  padding: 10px 12px;
+}
+.navInner{
+  max-width: 520px; margin: 0 auto;
+  display:flex; justify-content: space-between;
+}
+.navItem{
+  width: 20%;
+  text-align:center;
+  font-size: 12px;
+  opacity: .70;
+}
+.navItem.active{ opacity: 1; font-weight: 800; }
+
+hr.sep{
+  border: 0;
+  height: 1px;
+  background: rgba(255,255,255,.12);
+  margin: 14px 0;
+}
